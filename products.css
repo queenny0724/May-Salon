@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffffff, #f5e3d3); /* From white to beige */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading Style */
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 100px; /* Lowered the h1 a bit */
+    margin-bottom: 40px;
+    color: #8c7a6b; /* Beige color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #e0b089; /* Light beige underline */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 60px;
+    text-align: center;
+    color: #8c7a6b; /* Beige color */
+    letter-spacing: 2px;
+}
+
+/* Category and Product List */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping of boxes */
+    gap: 20px; /* Add spacing between boxes */
+}
+
+/* Category and Product Cards */
+ul li {
+    background-color: #f9f5f0; /* Light beige for cards */
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px; /* Fixed width for uniformity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Hover Effect */
+ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside categories */
+ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #8c7a6b; /* Beige color */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #e0b089; /* Light beige hover color */
+}
+
+/* Description Styles without dashes */
+ul li p {
+    color: #7f8c8d; /* Darker beige for text */
+    font-family: 'Poppins', sans-serif; /* Changed to a simpler font */
+    font-size: 1rem; /* Smaller font size for description */
+    margin-bottom: 10px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+/* Product Name */
+ul li h3 {
+    font-size: 1.5rem;
+    color: #8c7a6b; /* Beige color */
+    margin-bottom: 10px;
+}
+
+/* Product Image */
+ul li img {
+    width: 100%; /* Full width */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover img {
+    transform: scale(1.05);
+}
+
+/* Price */
+ul li .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e74c3c; /* Price color */
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+ul li .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8c7a6b; /* Beige color for buttons */
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+ul li .btn:hover {
+    background-color: #e0b089; /* Light beige hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+}
